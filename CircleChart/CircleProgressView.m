@@ -9,20 +9,15 @@
 #import "CircleProgressView.h"
 
 @interface CircleProgressView ()
-{
-    float _radius; // 圆的半径
-    CGPoint _center; // 圆心
-}
+
 /** 圆形进度条的背景 */
 @property (nonatomic, strong) CAShapeLayer *bgLayer;
 
 
-/** 圆形进度条 */
-@property (nonatomic, strong) CAShapeLayer *progressLayer;
-
 @end
 
 @implementation CircleProgressView
+@synthesize progressLayer = _progressLayer, center = _center, radius = _radius;
 
 - (CAShapeLayer *)bgLayer
 {
@@ -49,8 +44,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        self.backgroundColor = [UIColor greenColor];
         
         // 调整向左水平为0度
         self.startAngle = sAngle;
@@ -88,12 +81,10 @@
 
 - (void)createProgressLayerWithColor:(UIColor *)color
 {
-    
-
     // 计算终点的角度: 起始角度 + 角度差 * 百分比
-    float endAngle = self.startAngle + ((self.endAngle - self.startAngle) * self.percentage);
+    _progressEndAngle = self.startAngle + ((self.endAngle - self.startAngle) * self.percentage);
     
-    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:_center radius:_radius startAngle:self.startAngle endAngle:endAngle clockwise:YES];
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:_center radius:_radius startAngle:self.startAngle endAngle:_progressEndAngle clockwise:YES];
     self.progressLayer.path = path.CGPath;
     self.progressLayer.lineCap = kCALineCapRound;
     self.progressLayer.fillColor = [UIColor clearColor].CGColor;
@@ -118,6 +109,13 @@
 - (void)setPercentage:(double)percentage
 {
     _percentage = percentage;
+    if (_percentage > 1) {
+        _percentage = 1;
+    }else if (_percentage < 0)
+    {
+        _percentage = 0;
+    }
+    
     [self createProgressLayerWithColor:self.lineColor?:[UIColor orangeColor]];
 }
 
