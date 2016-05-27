@@ -41,7 +41,7 @@
     
     
     CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    pathAnimation.duration = 0.75;
+    pathAnimation.duration = 1;
     pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     pathAnimation.fromValue = @(0.0f);
     pathAnimation.toValue = @(self.percentage1);
