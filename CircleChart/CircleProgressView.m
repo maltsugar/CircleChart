@@ -65,7 +65,7 @@
 
 - (void)createBackgroudLayer
 {
-    UIColor *bgStrokeColor = self.backgroundLineColor?:[UIColor lightGrayColor];
+    UIColor *bgStrokeColor = self.backgroundLineColor?:[UIColor darkGrayColor];
     
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:_center radius:_radius startAngle:self.startAngle endAngle:self.endAngle clockwise:YES];
     self.bgLayer.path = path.CGPath;

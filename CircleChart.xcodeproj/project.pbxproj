@@ -14,7 +14,6 @@
 		04157A7C1CF53FE300485C66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04157A7B1CF53FE300485C66 /* Assets.xcassets */; };
 		04157A7F1CF53FE300485C66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04157A7D1CF53FE300485C66 /* LaunchScreen.storyboard */; };
 		04157AE31CF54CB300485C66 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04157AE21CF54CB300485C66 /* CircleProgressView.m */; };
-		04B289FB1CFD8E12002B0FAB /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B289FA1CFD8E12002B0FAB /* MZTimerLabel.m */; };
 		04E1547D1CF7F83C0026956B /* HTCircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1547C1CF7F83C0026956B /* HTCircleProgressView.m */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +30,6 @@
 		04157A801CF53FE300485C66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04157AE11CF54CB300485C66 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
 		04157AE21CF54CB300485C66 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
-		04B289F91CFD8E12002B0FAB /* MZTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZTimerLabel.h; sourceTree = "<group>"; };
-		04B289FA1CFD8E12002B0FAB /* MZTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZTimerLabel.m; sourceTree = "<group>"; };
 		04E1547B1CF7F83C0026956B /* HTCircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTCircleProgressView.h; sourceTree = "<group>"; };
 		04E1547C1CF7F83C0026956B /* HTCircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTCircleProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,8 +64,6 @@
 		04157A6E1CF53FE300485C66 /* CircleChart */ = {
 			isa = PBXGroup;
 			children = (
-				04B289F91CFD8E12002B0FAB /* MZTimerLabel.h */,
-				04B289FA1CFD8E12002B0FAB /* MZTimerLabel.m */,
 				04157A721CF53FE300485C66 /* AppDelegate.h */,
 				04157A731CF53FE300485C66 /* AppDelegate.m */,
 				04157A751CF53FE300485C66 /* ViewController.h */,
@@ -165,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E1547D1CF7F83C0026956B /* HTCircleProgressView.m in Sources */,
-				04B289FB1CFD8E12002B0FAB /* MZTimerLabel.m in Sources */,
 				04157AE31CF54CB300485C66 /* CircleProgressView.m in Sources */,
 				04157A771CF53FE300485C66 /* ViewController.m in Sources */,
 				04157A741CF53FE300485C66 /* AppDelegate.m in Sources */,
